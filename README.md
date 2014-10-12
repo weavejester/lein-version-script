@@ -1,26 +1,30 @@
 # lein-version-script
 
-A Leiningen plugin to do many wonderful things.
+A small Leiningen plugin that sets the project version from a shell
+script.
+
+## Installation
+
+Add the following to the `:plugins` section of your project.clj file:
+
+```clojure
+[lein-version-script "0.1.0-SNAPSHOT"]
+```
 
 ## Usage
 
-FIXME: Use this for user-level plugins:
+Add a `:version-script` key to your project file that contains a bash
+script to execute:
 
-Put `[lein-version-script "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-lein-version-script 0.1.0-SNAPSHOT`.
+```clojure
+:version-script "git rev-parse --short HEAD"
+```
 
-FIXME: Use this for project-level plugins:
-
-Put `[lein-version-script "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
-
-FIXME: and add an example usage that actually makes sense:
-
-    $ lein version-script
+The STDOUT from this script will be used as the project version.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 James Reeves
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
