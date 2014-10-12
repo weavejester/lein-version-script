@@ -1,4 +1,4 @@
-(defproject lein-version-script "0.1.0-SNAPSHOT"
+(defproject lein-version-script "0.1.0"
   :description "A Lein plugin to set the project version from a shell script"
   :url "https://github.com/weavejester/lein-version-script"
   :license {:name "Eclipse Public License"

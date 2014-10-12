@@ -8,7 +8,7 @@ script.
 Add the following to the `:plugins` section of your project.clj file:
 
 ```clojure
-[lein-version-script "0.1.0-SNAPSHOT"]
+[lein-version-script "0.1.0"]
 ```
 
 ## Usage
